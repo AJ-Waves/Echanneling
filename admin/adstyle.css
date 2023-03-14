@@ -1,0 +1,126 @@
+html{
+    min-height: 100%;
+}
+body{
+    height:100%;
+}
+
+
+/*--------------Nav Bar----------------------*/
+.nav-bar{
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.admin-body{
+    margin-left: 280px;
+    padding: 40px 15px;
+}
+
+
+/*--------------------Users-------------------*/
+table, th, td{
+    padding: 3px 5px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+}
+.row-margin{
+    margin: 10px 0 0 0;
+}
+
+.row-top{
+    margin-top: 10px;
+}
+.btn-align-center{
+    text-align: center;
+}
+/*-----------Schedule-----------------*/
+.print-icon{
+    font-size: 40px;
+    text-align: right;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+.Sch-topic{
+    text-align: center;
+}
+.sch-h5{
+    font-size: 20px;
+    font-weight: bold;
+}
+/*-------------Channeling Center-----------*/
+.checkbox-margin{
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+.cm-h5{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.error {
+    color: #FF0000;
+}
+
+
+/*-------------Center Manage--------------*/
+.btn-label-padding{
+    padding: 6px 8px;
+}
+
+
+
+
+@media(max-width: 992px){
+    .nav-bar{
+        position: relative;
+    }
+    .admin-body{
+        margin-left: 0;
+    }
+}
+
+/*--------------login logout-----------------*/
+.login-signup-bar {
+    padding: 8px 15px 0;
+    background: #23272b;
+    text-align: left;
+}
+
+.log-li-a{
+    display: block;
+    color: #ffffff;
+    padding-top: 6px;
+    text-decoration: none;
+}
+
+.log-a{
+    color: #ffffff;
+}
+

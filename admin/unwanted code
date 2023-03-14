@@ -1,0 +1,63 @@
+ <!--*******Site Payment add******************-->
+        <div class="row row-top">
+            <div class="col-md-12">
+                <h5 class="sch-h5">Handling Charges</h5>
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="mem_p">Gust Charge:</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="gust_pay" value="<?php isset($_POST['gust_pay']) ? $_POST['gust_pay'] : ''; ?>">
+                <span class="error"><?php if (isset($gust_pay_error)) {echo $gust_pay_error;} ?></span>
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="mem_b">Membership Bonus%:</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="member_bonus" value="<?php isset($_POST['member_bonus']) ? $_POST['member_bonus'] : ''; ?>">
+                <span class="error"><?php if (isset($member_bonus_error)) {echo $member_bonus_error;} ?></span>
+            </div>
+        </div>
+        <div class="col-xs-12 row-top">
+            <div class="row row-top btn-align-center">
+                <input type="submit" class="btn btn-default" name="handling_charges_add" value="Add"/>
+            </div>
+        </div>
+
+
+
+
+
+//*******Site Payment add******************
+
+if(isset($_POST['handling_charges_add'])){
+    $gust_pay = mysqli_real_escape_string($con, $_POST['gust_pay']);
+    $member_bonus = mysqli_real_escape_string($con, $_POST['member_bonus']);
+
+    if (empty($gust_pay)){
+        $error = true;
+        $gust_pay_error = "Please Enter Amount";
+    }
+
+    if (empty($member_bonus)){
+        $error = true;
+        $member_bonus_error = "Please Enter Bonus";
+    }
+
+    if (!$error) {
+        if (mysqli_query($con, "INSERT INTO handling_payment(gust_patient_pay,member_bonus) VALUES('$gust_pay','$member_bonus')")) {
+
+            header('Refresh:2; url=settings.php');
+            echo "Successfully Added to list!";
+        }
+        else {
+            echo "Error in registering...Please try again later!";
+            mysqli_error($con);
+        }
+    }
+
+}

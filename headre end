@@ -1,0 +1,352 @@
+
+<!--<div class="col-md-12 row-margin">-->
+            <!--<table width="100%" class="table-responsive">
+            <?php /*
+            if(!empty($result1)){
+                    echo "<tr>";
+                    echo "<th>Reg No</th>";
+                    echo "<th>Center Type</th>";
+                    echo "<th>Center Name</th>";
+                    echo "<th>Address</th>";
+                    echo "<th>E-mail</th>";
+                    echo "<th>Phone-01</th>";
+                    echo "<th>Phone-02</th>";
+                    echo "<th>Select Center</th>";
+                echo "</tr>";
+                echo "<tr>";
+                    while ($row = mysqli_fetch_array($result1)) {
+                        echo "<tr>";
+                        echo "<td>";
+                        echo "<input type='text' value='$row[hospitalID]'>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<input type='text' value='$row[Type]'>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<input type='text' value='$row[name]'>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<input type='text' value='$row[address]'>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<input type='text' value='$row[Phone1]'>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<input type='text' value='$row[Phone2]'>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<input type='text' value='$row[email]'>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<input type='text' value='$row[LabFacility]'>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<input type='text' value='$row[hemodialysis]'>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<button type='button' class='btn btn-default' id='uselect'>Update</button>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<button type='button' class='btn btn-default' id='uselect'>Delete</button>";
+                        echo "</td>";
+                        echo "</tr>";
+                    }
+
+            }*/ ?>
+            </table>-->
+
+
+
+
+             <!-- <select name='center' class='form-control' id='medical_centre'>
+                                   <?php /*
+                                   while ($row = mysqli_fetch_array($chan_centers)) {
+                                       echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+                                   };*/
+                                   ?>
+                               </select>-->
+
+
+
+<?php
+require ("navbar.php")
+?>
+<div class="col-md-8 col-xs-12 col-md-offset-1 admin-body">
+    <form>
+        <div class="row row-top">
+            <div class="col-md-12 Sch-topic">
+                <h5 class="sch-h5">Channeling Fee Assigning</h5>
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Center Name:</label>
+            </div>
+            <div class="col-md-6">
+                <select name="center" id="" class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Center Ref No:</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Doctor Ref No:</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Doctor Name:</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Speciality:</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Fee (Rs):</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-xs-12 row-top">
+            <div class="row row-top btn-align-center">
+                <button type="button" class="btn btn-default" id="schsearch">Search</button>
+                <button type="button" class="btn btn-default" id="schsearch">Assign</button>
+                <button type="button" class="btn btn-default" id="schsearch">Edit</button>
+                <button type="button" class="btn btn-default" id="schsearch">Delete</button>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="row row-top">
+            <div class="col-md-12 Sch-topic">
+                <h5 class="sch-h5">Lab Facility Fee Assigning</h5>
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Center Name:</label>
+            </div>
+            <div class="col-md-6">
+                <select name="center" id="" class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Center Ref No:</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Test/ Hemodialysis:</label>
+            </div>
+            <div class="col-md-6">
+                <select name="test" id="" class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Fee (Rs):</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-xs-12 row-top">
+            <div class="row row-top btn-align-center">
+                <button type="button" class="btn btn-default" id="schsearch">Search</button>
+                <button type="button" class="btn btn-default" id="schsearch">Assign</button>
+                <button type="button" class="btn btn-default" id="schsearch">Edit</button>
+                <button type="button" class="btn btn-default" id="schsearch">Delete</button>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="row row-top">
+            <div class="col-md-12 Sch-topic">
+                <h5 class="sch-h5">Handling Fee Assigning</h5>
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Membership Fee (Rs):</label>
+            </div>
+            <div class="col-md-6">
+                <select name="center" id="" class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Annual Fee (Rs):</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row row-top">
+            <div class="col-md-3">
+                <label for="">Handling Fee:</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-xs-12 row-top">
+            <div class="row row-top btn-align-center">
+                <button type="button" class="btn btn-default" id="schsearch">Search</button>
+                <button type="button" class="btn btn-default" id="schsearch">Assign</button>
+                <button type="button" class="btn btn-default" id="schsearch">Edit</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+</div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+/*----------------------------------------------------------------
+
+// define variables and set to empty values
+$fname_error = $lname_error = $initials_error = $email_error = $password_error = $cpassword_error = $birthday_error = $nic_error = $country_error = $address_error = $mobil_error = $land_error = "";
+$fname = $lname = $initials = $email = $password = $cpassword = $birthday = $nic = $country = $address = $mobil = $land = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["fname"])) {
+        $fname_error = "Please Enter Your First Name";
+    } else {
+        $fname = test_input($_POST["fname"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
+            $fname_error = "Only letters and white space allowed";
+        }
+    }
+
+    if (empty($_POST["lname"])) {
+        $lname_error = "Please Enter Your Last Name";
+    } else {
+        $lname = test_input($_POST["lname"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$lname)) {
+            $lname_error = "Only letters and white space allowed";
+        }
+    }
+
+    if (empty($_POST["initials"])) {
+        $initials_error = "Please Enter Your Initials";
+    } else {
+        $initials = test_input($_POST["initials"]);
+        // check if initials only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$initials)) {
+            $initials_error = "Only letters and white space allowed";
+        }
+    }
+
+    if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+    } else {
+        $email = test_input($_POST["email"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $email_error = "Invalid email format";
+        }
+    }
+
+    if (empty($_POST["pw"])) {
+        $password_error = "Please Enter a password";
+    } else {
+        $password = test_input($_POST["pw"]);
+        if(strlen($_POST["pw"]) < 6) {
+            $password_error = "Password must be minimum of 6 characters";
+        }
+    }
+
+    if($_POST["pw"] != $_POST["cpw"]) {
+        $cpassword_error = "Password and Confirm Password doesn't match";
+
+    } else {
+        $cpassword = test_input($_POST["cpw"]);
+    }
+
+    if (empty($_POST["birthday"])) {
+        $birthday_error = "Please Enter Your Birthday";
+    } else {
+        $birthday = test_input($_POST["birthday"]);
+    }
+
+    if (empty($_POST["nic"])) {
+        $nic_error = "Please Enter Your NIC or Passport Number";
+    } else {
+        $nic = test_input($_POST["nic"]);
+    }
+
+    if (empty($_POST["country"])) {
+        $country_error = "Please Select Your Country";
+    } else {
+        $country = test_input($_POST["country"]);
+    }
+
+    if (empty($_POST["address"])) {
+        $address_error = "Please Enter Your Address";
+    } else {
+        $address = test_input($_POST["address"]);
+    }
+
+    if (empty($_POST["phone1"])) {
+        $mobil_error = "Please Enter Your Mobil Number";
+    } else {
+        $mobil = test_input($_POST["phone1"]);
+        // check if initials only contains letters and whitespace
+        if (!preg_match("/^[0-9]*$/",$mobil)) {
+            $mobil_error = "Only numbers are allowed";
+        }
+    }
+
+    if (!preg_match("/^[0-9 ]*$/",$land)) {
+        $land_error = "Only numbers are allowed";
+    } else {
+        $land = test_input($_POST["phone2"]);
+    }
+
+}
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}

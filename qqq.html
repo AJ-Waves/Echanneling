@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>*--- Odd and Even Check ---*</title>
+    <style>
+        p{
+            color:white;
+            background-color:black;
+        }
+    </style>
+    <script>
+        function oddandEvenCheck(){
+            var num = 0;
+            var op = 0;
+            var result = 0;
+            var num = document.getElementById("inputNo").value;
+            num = parseInt(num);
+            if(num%2==0){
+                result = "Even Number";
+            }
+            else{
+                result = "Odd Number";
+            }
+
+            document.getElementById("result").innerHTML = result;
+
+        }
+    </script>
+</head>
+<body>
+<h3>*___Odd and Even Check___*</h3>
+Input No.<input type="text" id="inputNo">
+<br/><br/>
+<button onclick="oddandEvenCheck()">oddeven</button>
+<p id="result"></p>
+</body>
+
+</html>
